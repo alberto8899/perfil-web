@@ -1,0 +1,151 @@
+/* Importa las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #000000;
+    --color-secundario: #F6F6F6;
+    --color-terciario: #22D4FF;
+    --color-hover: #272727;
+
+    --fuente-montserrat: 'Montserrat', sans-serif;
+    --fuente-krona: 'Krona One', sans-serif;
+}
+
+/* Aplica a todos los elementos */
+* {
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margin predeterminado */
+}
+
+/* Estilos generales para el cuerpo del documento */
+body {
+    background-color: var(--color-primario); /* Establece el color de fondo a negro */
+    color: var(--color-secundario) ; /* Establece el color del texto a blanco antiguo */
+    /*height: 100vh; /* Altura del cuerpo al 100% de la ventana del navegador */
+    box-sizing: border-box; /* Incluye padding y border en el cálculo del ancho y alto total del elemento */
+}
+
+.header{
+    padding: 2%  0% 0% 15%;
+}
+
+.header_menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header_menu_link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:var(--color-terciario);
+    text-decoration: none;
+
+}
+
+/* Estilo para los elementos con la clase "titulo-destaque" */
+.titulo-destaque {
+    color: cadetblue; /* Establece el color del texto a azul cadete */
+}
+
+/* Estilo para los elementos con la clase "presentacion" */
+.presentacion {
+    display: flex; /* Usa flexbox para el layout */
+    align-items: center; /* Alinea los ítems verticalmente al centro */
+    padding: 5% 15%; /* Aplica margen del 10% arriba y abajo, 15% a los lados */
+    justify-content: space-between; /* Distribuye el espacio sobrante equitativamente entre los elementos */
+    
+}
+
+/* Estilo para los elementos con la clase "presentacion_contenido" */
+.presentacion_contenido {
+    width: 50%; /* Ancho fijo de 615px */
+    display: flex; /* Usa flexbox para el layout */
+    flex-direction: column; /* Coloca los ítems en una columna */
+    gap: 40px; /* Espacio de 40px entre los ítems */
+}
+
+/* Estilo para los elementos con la clase "presentacion_contenido_titulo" */
+.presentacion_contenido_titulo {
+    font-size: 2.25rem; /* Tamaño de fuente de 36px */
+    font-family: var(--fuente-krona); /* Aplica la fuente "Krona One" */
+}
+
+/* Estilo para los elementos con la clase "presentacion_contenido_texto" */
+.presentacion_contenido_texto {
+    font-size: 1.5rem; /* Tamaño de fuente de 24px */
+    font-family: var(--fuente-montserrat); /* Aplica la fuente "Montserrat" */
+}
+
+/* Estilo para los elementos con la clase "presentacion_enlace" */
+.presentacion_enlace {
+    display: flex; /* Usa flexbox para el layout */
+    justify-content: space-between; /* Distribuye el espacio sobrante equitativamente entre los elementos */
+    flex-direction: column; /* Coloca los ítems en una columna */
+    align-items: center; /* Alinea los ítems horizontalmente al centro */
+    gap: 32px; /* Espacio de 32px entre los ítems */
+}
+
+/* Estilo para los elementos con la clase "pesentacion_enlaces_link" (posiblemente haya un error tipográfico en el nombre de la clase) */
+.pesentacion_enlaces_link {
+    width: auto; /* Ancho fijo de 280px */
+    /* background-color: var(--color-terciario); /* Color de fondo azul claro */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 21.5px 0px; /* Padding de 21.5px arriba y abajo, 0px a los lados */
+    border-radius: 8px; /* Bordes redondeados con un radio de 16px */
+    font-family: var(--fuente-montserrat); /* Aplica la fuente "Montserrat" */
+    font-size: 1.5rem; /* Tamaño de fuente de 24px */
+    font-weight: 600; /* Grosor de fuente de 600 (semi-bold) */
+    text-decoration: none; /* Elimina la subrayado de los enlaces */
+    color: #F6F6F6; /* Color del texto negro */
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap:16px;
+    
+}
+.pesentacion_enlaces_link:hover{
+    background-color: var(--color-hover);
+    
+}
+
+.presentacion_enlaces_subtitulo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400px;
+    
+    
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 20px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.imagen_alberto{
+    width: 40%;
+}
+
+@media (max-width: 1200 ) {
+
+    .header{
+        padding: 10%;
+    }
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion {
+
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion_contenido{
+        width: auto;
+    }
+}
